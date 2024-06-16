@@ -1,4 +1,4 @@
-# Factorial-Questions
+# Function and Methods
 
 <h1>Learning Data Structures and Algorithms with Java</h1>
     <h2>Post 3: Functions and Methods</h2>
