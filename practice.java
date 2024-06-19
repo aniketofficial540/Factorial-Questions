@@ -1,4 +1,5 @@
 import java.lang.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -27,7 +28,6 @@ public class practice {
     }
 }
 */
-
 
 /*
 
@@ -61,8 +61,7 @@ public class practice {
 }
 
 */
-
-/*
+/* 
 //checking prime or not
 
 public class practice {
@@ -77,26 +76,30 @@ public class practice {
         }
         return 1;
     }
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try{
+            Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the number: ");
-        int num = sc.nextInt();
-         
-        int result = prime(num);
+            System.out.println("Enter the number: ");
+            int num = sc.nextInt();
+        
+            int result = prime(num);
 
-        if (result == 1) {
-            System.out.println(num + " is a prime number");
-        } 
-        else {
-            System.out.println(num + " is not a prime number");
+            if (result == 1) {
+                System.out.println(num + " is a prime number");
+            }    
+            else {
+                System.out.println(num + " is not a prime number");
+            }
+        }
+        catch (java.util.InputMismatchException e){
+            System.out.print("Invalid Input! Please enter the valid Input Integer.");
         }
     }
 }
 */
 
-
+/*
 // prime in range
 public class practice {
     public static int prime(int num) {
@@ -116,15 +119,73 @@ public class practice {
 
         System.out.println("Enter the starting number: ");
         int snum = sc.nextInt();
-         
+
         System.out.println("Enter the end number: ");
         int endnum = sc.nextInt();
 
         for (int i = snum; i <= endnum; i++){
             if (prime(i) == 1){
                 System.out.println(i + " is a prime number");
-            }
+            }   
         }
     }
 }
+*/
 
+/*
+//Binary to Decimal
+public class practice {
+
+    public static int bin(int num){
+        int f_num = 0;
+        int rem;
+        int i = 0;
+        while (num > 0){
+            rem = num%10;
+            f_num = f_num + rem*(int)Math.pow(2, i);
+            num = num/10;
+            i++;
+        }
+        return f_num;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the Binary Number: ");
+        int num = sc.nextInt();
+
+        int result = bin(num);
+        System.out.println("The decimal number is: " + result);
+    }
+}
+*/
+
+/*
+//Decimal to Binary
+public class practice {
+    public static int dec(int num){
+    int f_num = 0;
+    int i = 0;
+    int rem;
+    while (num > 0){
+        rem = num%2;
+        f_num = f_num + rem*(int)Math.pow(10, i);
+        num = num/2;
+        i++;
+    }
+    return f_num;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the Decimal Number: ");
+        int num = sc.nextInt();
+
+        int result = dec(num);
+
+        System.out.println("The Binary number is: " + result);
+    }
+  
+}
+*/
